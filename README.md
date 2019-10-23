@@ -16,5 +16,5 @@ print("f'(a) =", expr.d(a), "or", expr.d(a).simplify(), "\tresult =", expr.d(a).
 print("f'(b) =", expr.d(b), "or", expr.d(b).simplify(), "\tresult =", expr.d(b).evaluate()) # 0 + (0 * 3 + 6 * 1)
 print("f'(c) =", expr.d(c), "or", expr.d(c).simplify(), "\tresult =", expr.d(c).evaluate()) # 0 + (1 * 3 + 6 * 0)
 ```  
-Result:    
-![alt text](https://github.com/Lcbx/Calculus/blob/master/Capture.PNG "screenshot")
+Result:
+<img src="https://github.com/Lcbx/Calculus/blob/master/Capture.PNG"  width="170"/>
