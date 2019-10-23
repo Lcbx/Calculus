@@ -140,10 +140,9 @@ class Expo(Expr):
 		return not self == obj
 
 if __name__ == "__main__":
-	a = Var(2.)
-	b = Var(3.)
-	c = Var(6.)
-	#d = Var(-1.)
+	# a = Var(2.)	b = Var(3.) c = Var(6.)
+	a, b, c = Var(2.), Var(3.), Var(6.) #d = Var(-1.)
+	
 	expr = a + b * c #** d
 
 	print("f =", expr, "where a =", a.value, "b =", b.value, "c =", c.value, "\tresult =", expr.evaluate())
