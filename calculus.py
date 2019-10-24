@@ -17,8 +17,8 @@ class Expr:
 
 # the variable class, base of any mathical expression
 class Var(Expr):
-	def __init__(self, value = 0.): # name, value):
-		self.name = None
+	def __init__(self, value = 0., name = None):
+		self.name = name
 		self.value = value
 	
 	def evaluate(self):
@@ -43,8 +43,8 @@ class Var(Expr):
 		return self.name
 
 # those sentinel values are for derived expressions and the simplification of expressions
-zero = Var(0.)
-one  = Var(1.)
+zero = Var(0., "0")
+one  = Var(1., "1")
 
 # addition
 class Add(Expr):
@@ -144,11 +144,10 @@ if __name__ == "__main__":
 	a, b, c = Var(2.), Var(3.), Var(6.) #d = Var(-1.)
 	
 	expr = a + b * c #** d
-
-	print("f =", expr, "where a =", a.value, "b =", b.value, "c =", c.value, "\tresult =", expr.evaluate())
-	print("f'(a) =", expr.d(a), "or", expr.d(a).simplify(), "\tresult =", expr.d(a).evaluate()) # 1 + (0 * 3 + 6 * 0)
-	print("f'(b) =", expr.d(b), "or", expr.d(b).simplify(), "\tresult =", expr.d(b).evaluate()) # 0 + (0 * 3 + 6 * 1)
-	print("f'(c) =", expr.d(c), "or", expr.d(c).simplify(), "\tresult =", expr.d(c).evaluate()) # 0 + (1 * 3 + 6 * 0)
+	print("a =", a.value, "  b =", b.value, "  c =", c.value, "   and f =", expr,"=", expr.evaluate())
+	print("f'(a) =", expr.d(a), "=", expr.d(a).simplify(), "=", expr.d(a).evaluate()) # 1 + (0 * 3 + 6 * 0)
+	print("f'(b) =", expr.d(b), "=", expr.d(b).simplify(), "=", expr.d(b).evaluate()) # 0 + (0 * 3 + 6 * 1)
+	print("f'(c) =", expr.d(c), "=", expr.d(c).simplify(), "=", expr.d(c).evaluate()) # 0 + (1 * 3 + 6 * 0)
 	#print("who's your daddy now ?")
 
 	# h = Mul(b,c)
