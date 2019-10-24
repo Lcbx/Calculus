@@ -2,7 +2,8 @@
 
 A simple and elegant way of calculating mathematical derivatives    
 
-Uses overloaded operators on a custom Var class to construct a mathematical expression tree that can be evaluated, derived and simplified.  
+Uses overloaded operators on a custom Var class to construct a mathematical expression tree.
+Expressions can be evaluated, derived and simplified by manipulating said tree.  
 Supports addition, multiplication and partly exponents. Only about 80 effective Lines of code
 
 Example :  
